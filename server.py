@@ -28,7 +28,7 @@ whisper_model: WhisperModel = None
 async def lifespan(app: FastAPI):
     global whisper_model
     print("Loading Whisper model (small)...")
-    whisper_model = WhisperModel("small", device="cpu", compute_type="int8")
+    whisper_model = WhisperModel("base", device="cpu", compute_type="int8")
     print("Whisper model ready.")
     yield
 
